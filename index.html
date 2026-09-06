@@ -1,17 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>India × Japan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India × Japan | A Curious Journey</title>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    color: #1d1b19;
+    background: #f4efe5;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .paper { max-width: 1180px; margin: 0 auto; padding: 22px; }
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 4px 24px; font-size: 13px; letter-spacing: 2px;
+  }
+  nav a { color: inherit; text-decoration: none; margin-left: 20px; }
+  .logo { font-weight: 800; }
+  .hero {
+    min-height: 72vh; display: grid; place-items: center; text-align: center;
+    border: 1px solid #c8c0b2; padding: 55px 20px; position: relative;
+    background: #eee7da;
+    overflow: hidden;
+  }
+  .stamp {
+    position: absolute; border: 2px solid #b02a2a; color: #b02a2a;
+    padding: 8px 12px; font-size: 11px; letter-spacing: 2px; transform: rotate(-8deg);
+  }
+  .stamp.one { top: 35px; left: 35px; }
+  .stamp.two { right: 35px; bottom: 40px; transform: rotate(7deg); }
+  .tiny { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; }
+  h1 {
+    font-family: Georgia, serif; font-size: clamp(58px, 11vw, 138px);
+    line-height: .82; margin: 22px 0; letter-spacing: -7px;
+  }
+  .x { color: #b02a2a; }
+  .hero p { max-width: 600px; margin: 0 auto; font-family: Georgia, serif; font-size: 20px; line-height: 1.5; }
+  .button {
+    display: inline-block; margin-top: 30px; padding: 13px 20px; border: 1px solid #1d1b19;
+    color: #1d1b19; text-decoration: none; font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  }
+  section { padding: 80px 0; }
+  .section-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 28px; }
+  .worlds { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .card {
+    min-height: 360px; padding: 34px; display: flex; flex-direction: column; justify-content: space-between;
+    border: 1px solid #c8c0b2; position: relative;
+  }
+  .india { background: #e9dfcf; }
+  .japan { background: #f7f5ef; }
+  .card h2 { font-family: Georgia, serif; font-size: 58px; margin: 0; }
+  .card p { max-width: 330px; line-height: 1.6; }
+  .number { font-size: 12px; letter-spacing: 2px; }
+  .rabbit {
+    background: #1d1b19; color: #f4efe5; padding: 55px 45px; position: relative;
+  }
+  .rabbit h2 { font-family: Georgia, serif; font-size: clamp(42px, 7vw, 80px); margin: 0 0 18px; }
+  .rabbit p { max-width: 650px; line-height: 1.7; }
+  .rabbit ul { list-style: none; padding: 25px 0 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .rabbit li { padding: 18px 0; border-top: 1px solid #625d55; font-family: Georgia, serif; font-size: 20px; }
+  .connection { display: grid; grid-template-columns: 1fr 1.5fr; gap: 45px; align-items: start; }
+  .connection h2 { font-family: Georgia, serif; font-size: 55px; margin: 0; }
+  .connection-text { font-size: 18px; line-height: 1.8; }
+  footer { border-top: 1px solid #c8c0b2; padding: 28px 0 50px; font-size: 12px; letter-spacing: 1px; display: flex; justify-content: space-between; }
+  @media (max-width: 700px) {
+    .worlds, .connection { grid-template-columns: 1fr; }
+    .rabbit ul { grid-template-columns: 1fr; }
+    h1 { letter-spacing: -4px; }
+    nav a { margin-left: 8px; }
+  }
+</style>
 </head>
-
 <body>
+<div class="paper">
+  <nav>
+    <div class="logo">I × J / 01</div>
+    <div><a href="#worlds">WORLDS</a><a href="#rabbit">RABBIT HOLE</a><a href="#connection">CONNECTION</a></div>
+  </nav>
 
-    <h1>INDIA × JAPAN</h1>
+  <header class="hero">
+    <div class="stamp one">FIELD NOTES</div>
+    <div class="stamp two">🇮🇳 × 🇯🇵</div>
+    <div>
+      <div class="tiny">A personal exploration</div>
+      <h1>INDIA <span class="x">×</span><br>JAPAN</h1>
+      <p>Two cultures. One curious mind. A growing collection of questions, discoveries, contrasts and connections.</p>
+      <a class="button" href="#worlds">Enter the rabbit hole ↓</a>
+    </div>
+  </header>
 
-    <p>A journey of culture, connection & curiosity.</p>
+  <section id="worlds">
+    <div class="section-label">01 / The two worlds</div>
+    <div class="worlds">
+      <article class="card india">
+        <div class="number">🇮🇳 01</div>
+        <div><h2>INDIA</h2><p>The place I come from. A country of languages, traditions, food, festivals and countless ways of being Indian.</p></div>
+      </article>
+      <article class="card japan">
+        <div class="number">🇯🇵 02</div>
+        <div><h2>JAPAN</h2><p>The place I’m curious about. Beyond anime and tourism: everyday life, culture, society, history and the details that make Japan Japan.</p></div>
+      </article>
+    </div>
+  </section>
 
+  <section id="rabbit">
+    <div class="rabbit">
+      <div class="section-label">02 / Follow the curiosity</div>
+      <h2>The Rabbit Hole 🐇</h2>
+      <p>This project is less about collecting facts and more about noticing things. Start somewhere, follow the question, and see where it leads.</p>
+      <ul>
+        <li>→ Traditions I discovered</li>
+        <li>→ Things that surprised me</li>
+        <li>→ Similarities I didn't expect</li>
+        <li>→ Differences I'm learning to understand</li>
+        <li>→ Questions I still have</li>
+        <li>→ India × Japan connections</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="connection">
+    <div><div class="section-label">03 / The connection</div><h2>Not a tourism guide.</h2></div>
+    <div class="connection-text">This is a learning project about looking closer. India and Japan are different in many ways, but comparing them can reveal unexpected connections too. The goal is to learn with curiosity, question assumptions and build a more thoughtful understanding of both cultures.</div>
+  </section>
+
+  <footer><span>INDIA × JAPAN</span><span>Still learning. Still questioning. Still curious.</span></footer>
+</div>
 </body>
 </html>
-
